@@ -34,7 +34,7 @@ print(f"筛选出的特征数: {len(selected_features)}")
 print("\n筛选结果:")
 print(results_df[['Feature', 'Coefficient']])
 
-output_path = "F:\桌面\Lasso_Feature_Selection_Results.xlsx"  # 替换为你想保存的路径
+output_path = "F:\桌面\Lasso_Feature_Selection_Results.xlsx" 
 with pd.ExcelWriter(output_path) as writer:
     results_df.to_excel(writer, sheet_name='Selected_Features', index=False)
 
