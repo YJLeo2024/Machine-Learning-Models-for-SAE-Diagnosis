@@ -111,9 +111,7 @@ plt.figure(figsize=(12, 7))
 non_zero_idx = np.where(lasso_cv.coef_ != 0)[0]
 n_features = len(non_zero_idx)
 
-colors = plt.cm.tab20(np.linspace(0, 1, min(n_features, 20)))  # 最多20种鲜明颜色
-
-# colors = plt.cm.viridis(np.linspace(0, 1, n_features))
+colors = plt.cm.tab20(np.linspace(0, 1, min(n_features, 20))) 
 
 for i, idx in enumerate(non_zero_idx):
     plt.plot(alphas, coefs[idx],
